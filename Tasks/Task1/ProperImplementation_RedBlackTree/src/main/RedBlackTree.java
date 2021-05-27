@@ -159,7 +159,7 @@ public class RedBlackTree<T> {
 
         
         if(root.data == data) {
-            throw new IllegalArgumentException("Duplicate date " + data);
+            throw new IllegalArgumentException("Duplicate data " + data);
         }
         //if we go on left side then isLeft will be true
         //if we go on right side then isLeft will be false.
@@ -431,6 +431,23 @@ public class RedBlackTree<T> {
     	return false;
     }
        
-
+    
+    public boolean find(Node root, T data) {
+        if(root == null || root.isNullLeaf) {
+            return false;
+        }
+        if(root.data == data) {
+            return true;
+        }
+    
+        if(this.greaterThan(root.data, data)) {
+        	//if((int)root.data < (int)data) {
+            find(root.right, data);
+        } else {
+            find(root.left, data);
+        }
+        
+        return false;
+    }
     
 }
