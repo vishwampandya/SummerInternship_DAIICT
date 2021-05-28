@@ -297,7 +297,7 @@ public static void flow(int type){
 						break;
 					case 2 :  
 						//insert				
-						System.out.print("Enter the String you want to insert : ");
+						System.out.print("Enter the Integer you want to insert : ");
 						Sdata = input.next();
 						if(redBlackTree.find(root, Sdata)){
 							System.out.println("element already exits!!!");
@@ -311,7 +311,7 @@ public static void flow(int type){
 						break;
 					case 3 :
 						//delete
-						System.out.print("Enter the String you want to delete : ");
+						System.out.print("Enter the Integer you want to delete : ");
 						Sdata = input.next();
 						if(redBlackTree.find(root, Sdata)){
 							root = redBlackTree.delete(root, Sdata);

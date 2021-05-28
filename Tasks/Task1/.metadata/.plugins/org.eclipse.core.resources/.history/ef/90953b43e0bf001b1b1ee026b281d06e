@@ -277,18 +277,18 @@ public static void flow(int type){
         
 	}
 	else if(type==2){
-		//String
-				RedBlackTree<String>.Node root = null;
-		        RedBlackTree<String> redBlackTree = new RedBlackTree<String>();
+		//Integer
+				RedBlackTree<Integer>.Node root = null;
+		        RedBlackTree<Integer> redBlackTree = new RedBlackTree<Integer>();
 		        do{
 					menu(2);
 					choice = input.nextInt();
 					switch(choice){
 					case 1 : 
 						//find
-						System.out.print("Enter the String you want to find : ");
-						Sdata = input.next();
-						if(redBlackTree.find(root, Sdata)){
+						System.out.print("Enter the Integer you want to find : ");
+						Idata = input.nextInt();
+						if(redBlackTree.find(root, Idata)){
 							System.out.println("element found");
 						}
 						else{
@@ -297,13 +297,13 @@ public static void flow(int type){
 						break;
 					case 2 :  
 						//insert				
-						System.out.print("Enter the String you want to insert : ");
-						Sdata = input.next();
-						if(redBlackTree.find(root, Sdata)){
+						System.out.print("Enter the Integer you want to insert : ");
+						Idata = input.nextInt();
+						if(redBlackTree.find(root, Idata)){
 							System.out.println("element already exits!!!");
 						}
 						else{
-							root = redBlackTree.insert(root, Sdata);
+							root = redBlackTree.insert(root, Idata);
 							System.out.println("element inserted!!");
 						}
 						
@@ -311,10 +311,10 @@ public static void flow(int type){
 						break;
 					case 3 :
 						//delete
-						System.out.print("Enter the String you want to delete : ");
-						Sdata = input.next();
-						if(redBlackTree.find(root, Sdata)){
-							root = redBlackTree.delete(root, Sdata);
+						System.out.print("Enter the Integer you want to delete : ");
+						Idata = input.nextInt();
+						if(redBlackTree.find(root, Idata)){
+							root = redBlackTree.delete(root, Idata);
 							System.out.println("element deteted!!");
 						}
 						else{

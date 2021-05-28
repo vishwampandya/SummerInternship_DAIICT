@@ -278,60 +278,60 @@ public static void flow(int type){
 	}
 	else if(type==2){
 		//String
-				RedBlackTree<String>.Node root = null;
-		        RedBlackTree<String> redBlackTree = new RedBlackTree<String>();
-		        do{
-					menu(2);
-					choice = input.nextInt();
-					switch(choice){
-					case 1 : 
-						//find
-						System.out.print("Enter the String you want to find : ");
-						Sdata = input.next();
-						if(redBlackTree.find(root, Sdata)){
-							System.out.println("element found");
-						}
-						else{
-							System.out.println("element not found");
-						}
-						break;
-					case 2 :  
-						//insert				
-						System.out.print("Enter the String you want to insert : ");
-						Sdata = input.next();
-						if(redBlackTree.find(root, Sdata)){
-							System.out.println("element already exits!!!");
-						}
-						else{
-							root = redBlackTree.insert(root, Sdata);
-							System.out.println("element inserted!!");
-						}
-						
-						
-						break;
-					case 3 :
-						//delete
-						System.out.print("Enter the String you want to delete : ");
-						Sdata = input.next();
-						if(redBlackTree.find(root, Sdata)){
-							root = redBlackTree.delete(root, Sdata);
-							System.out.println("element deteted!!");
-						}
-						else{
-							
-							System.out.println("element doesnot exits!!!");
-						}
-						
-						break;
-					case 0 : 
-						break;
-					default :
-						System.out.println("Please enter a valid input");
-						break;
-					}
+		RedBlackTree<String>.Node root = null;
+        RedBlackTree<String> redBlackTree = new RedBlackTree<String>();
+        do{
+			menu(2);
+			choice = input.nextInt();
+			switch(choice){
+			case 1 : 
+				//find
+				System.out.print("Enter the String you want to find : ");
+				Sdata = input.next();
+				if(redBlackTree.find(root, Sdata)){
+					System.out.println("element found");
+				}
+				else{
+					System.out.println("element not found ");
+				}
+				break;
+			case 2 :  
+				//insert				
+				System.out.print("Enter the String you want to insert : ");
+				Sdata = input.next();
+				if(redBlackTree.find(root, Sdata)){
+					System.out.println("element already exits!!!");
+				}
+				else{
+					root = redBlackTree.insert(root, Sdata);
+					System.out.println("element inserted!! ");
+				}
+				
+				
+				break;
+			case 3 :
+				//delete
+				System.out.print("Enter the String you want to delete : ");
+				Sdata = input.next();
+				if(redBlackTree.find(root, Sdata)){
+					root = redBlackTree.delete(root, Sdata);
+					System.out.println("element deteted!!");
+				}
+				else{
 					
-					
-				}while(choice!=0);
+					System.out.println("element doesnot exits!!!");
+				}
+				
+				break;
+			case 0 : 
+				break;
+			default :
+				System.out.println("Please enter a valid input");
+				break;
+			}
+			
+			
+		}while(choice!=0);
         
 	}
 	else if(type==3){

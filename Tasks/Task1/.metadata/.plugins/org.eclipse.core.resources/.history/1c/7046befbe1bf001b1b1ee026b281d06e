@@ -1,0 +1,21 @@
+package tests;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import main.RedBlackTree;
+
+public class test1 {
+
+	@Test
+	public void test() {
+		RedBlackTree<Integer>.Node root = null;
+        RedBlackTree<Integer> redBlackTree = new RedBlackTree<Integer>();
+        
+        root = redBlackTree.insert(root, 2);
+        boolean check1 = redBlackTree.find(root, 2);
+        assert("true",check1);
+	}
+
+}
