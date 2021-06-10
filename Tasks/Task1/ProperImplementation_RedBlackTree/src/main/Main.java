@@ -220,7 +220,7 @@ public static void flow(int type){
 	if(type==1){
 	
 		//Integer
-		RedBlackTree<Integer>.Node root = null;
+		//RedBlackTree<Integer>.Node root = null;
         RedBlackTree<Integer> redBlackTree = new RedBlackTree<Integer>();
         do{
 			menu(2);
@@ -230,7 +230,7 @@ public static void flow(int type){
 				//find
 				System.out.print("Enter the Integer you want to find : ");
 				Idata = input.nextInt();
-				if(redBlackTree.find(root, Idata)){
+				if(redBlackTree.searchTree(Idata)){
 					System.out.println("element found");
 				}
 				else{
@@ -241,11 +241,11 @@ public static void flow(int type){
 				//insert				
 				System.out.print("Enter the Integer you want to insert : ");
 				Idata = input.nextInt();
-				if(redBlackTree.find(root, Idata)){
+				if(redBlackTree.searchTree(Idata)){
 					System.out.println("element already exits!!!");
 				}
 				else{
-					root = redBlackTree.insert(root, Idata);
+					redBlackTree.insert(Idata);
 					System.out.println("element inserted!!");
 				}
 				
@@ -255,8 +255,8 @@ public static void flow(int type){
 				//delete
 				System.out.print("Enter the Integer you want to delete : ");
 				Idata = input.nextInt();
-				if(redBlackTree.find(root, Idata)){
-					root = redBlackTree.delete(root, Idata);
+				if(redBlackTree.searchTree(Idata)){
+					redBlackTree.deleteNode(Idata);
 					System.out.println("element deteted!!");
 				}
 				else{
@@ -288,7 +288,7 @@ public static void flow(int type){
 						//find
 						System.out.print("Enter the String you want to find : ");
 						Sdata = input.next();
-						if(redBlackTree.find(root, Sdata)){
+						if(redBlackTree.searchTree(Sdata)){
 							System.out.println("element found");
 						}
 						else{
@@ -299,11 +299,11 @@ public static void flow(int type){
 						//insert				
 						System.out.print("Enter the String you want to insert : ");
 						Sdata = input.next();
-						if(redBlackTree.find(root, Sdata)){
+						if(redBlackTree.searchTree(Sdata)){
 							System.out.println("element already exits!!!");
 						}
 						else{
-							root = redBlackTree.insert(root, Sdata);
+							redBlackTree.insert(Sdata);
 							System.out.println("element inserted!!");
 						}
 						
@@ -313,8 +313,8 @@ public static void flow(int type){
 						//delete
 						System.out.print("Enter the String you want to delete : ");
 						Sdata = input.next();
-						if(redBlackTree.find(root, Sdata)){
-							root = redBlackTree.delete(root, Sdata);
+						if(redBlackTree.searchTree(Sdata)){
+							redBlackTree.deleteNode(Sdata);
 							System.out.println("element deteted!!");
 						}
 						else{
@@ -347,7 +347,7 @@ public static void flow(int type){
 				//find
 				System.out.print("Enter the Double you want to find : ");
 				Ddata = input.nextDouble();
-				if(redBlackTree.find(root, Ddata)){
+				if(redBlackTree.searchTree(Ddata)){
 					System.out.println("element found");
 				}
 				else{
@@ -358,11 +358,11 @@ public static void flow(int type){
 				//insert				
 				System.out.print("Enter the Double you want to insert : ");
 				Ddata = input.nextDouble();
-				if(redBlackTree.find(root, Ddata)){
+				if(redBlackTree.searchTree(Ddata)){
 					System.out.println("element already exits!!!");
 				}
 				else{
-					root = redBlackTree.insert(root, Ddata);
+					redBlackTree.insert(Ddata);
 					System.out.println("element inserted!!");
 				}
 				
@@ -372,8 +372,8 @@ public static void flow(int type){
 				//delete
 				System.out.print("Enter the Double you want to delete : ");
 				Ddata = input.nextDouble();
-				if(redBlackTree.find(root, Ddata)){
-					root = redBlackTree.delete(root, Ddata);
+				if(redBlackTree.searchTree(Ddata)){
+					redBlackTree.deleteNode(Ddata);
 					System.out.println("element deteted!!");
 				}
 				else{
