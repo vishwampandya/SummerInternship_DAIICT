@@ -52,8 +52,10 @@ public class UsingDFS{
 		g.addEdgeDirected(graph,7,5);
 		
 		g.addEdgeDirected(graph,4,6);
-		g.addEdgeDirected(graph,6,7);
-		g.addEdgeDirected(graph,7,4);
+		g.addEdgeDirected(graph,6,4);
+		//g.addEdgeDirected(graph,4,6);
+		//g.addEdgeDirected(graph,6,7);
+		//g.addEdgeDirected(graph,7,4);
 		
 		
 		if(g.detectCycle(graph,V)) System.out.println("This graph has a cycle!");
