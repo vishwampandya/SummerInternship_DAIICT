@@ -1,0 +1,50 @@
+import java.util.*;
+
+
+public class Main{
+	public static void main(String[] args) throws Exception{
+	  College daiict = new College();
+	  LinkedList<Student> studentList =  daiict.fillData("/home/vishwam/E/college/DAIICT/Summer Internship (Under Lavneet sir)/SummerInternship_DAIICT/Tasks/Task3 (graphs)/Project/src/data.txt");
+	  //daiict.printStudentData(studentList); 
+
+	  
+	  RedBlackTree2<Integer> indexTree2 = daiict.getTreeBasedOnIndex(studentList);
+	  if(indexTree2.searchTree(9).data!=null){
+		  System.out.println("found");
+	  }
+	  else{
+		 System.out.println("not found");
+	  }
+	  
+	  
+	  //RedBlackTree<Integer> indexTree = daiict.getTreeBasedOnIndex(studentList);
+	  RedBlackTree<Long> idTree = daiict.getTreeBasedOnStudentId(studentList);
+	  RedBlackTree<String> nameTree = daiict.getTreeBasedOnName(studentList);
+	  
+	  Main obj = new Main();
+	  obj.welcomeMessage("Dhirubhai Ambani Institute of Information and Communication Technology(DAIICT)");
+	  
+
+	  //trying for graphs
+	  /*
+	  ArrayList<ArrayList<Pair<Integer>>> graph = new ArrayList<ArrayList<Pair<Integer>>>();
+	  for(Student s : studentList){
+		 graph.add(new ArrayList<Pair<Integer>>());
+		 
+	  }
+	  */
+	  
+	}
+	public void welcomeMessage(String collegeName){
+		System.out.println("Welcome to "+collegeName);
+		System.out.println("\nHere we are having list of our students .We have there index,Student id,name and their cpi");
+	}
+}
+class Pair<T extends Comparable<T>>{
+	Student ref;
+	T data;
+	Pair(Student s,T data){
+		this.ref = s;
+		this.data = data;
+	}
+}

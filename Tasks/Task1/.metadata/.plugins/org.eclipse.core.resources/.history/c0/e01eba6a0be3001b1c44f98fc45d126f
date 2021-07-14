@@ -1,0 +1,46 @@
+import java.io.*;
+import java.util.Iterator;
+import java.util.LinkedList;
+
+public class College{
+	public static void main(String[] args) throws Exception{
+	  College daiict = new College();
+	  daiict.fillData("./data.txt");
+	  
+	}
+	
+	public LinkedList<Student> fillData(String fileName) throws Exception{
+		FileReader fr=new FileReader(fileName);    
+        BufferedReader br=new BufferedReader(fr);  
+        
+        LinkedList<Student> studentList = new LinkedList<Student>();
+  	  
+  	 	String line = br.readLine();
+  	 	while(!line.equals("-1")){
+  	  		String[] str = line.trim().split("\\s+");
+  	  		
+  	  		int index = Integer.parseInt(str[0]);
+  	  		//long id = Long.parseLong(str[1]);
+  	  		//String name = str[3];
+  	  		Double cpi = Double.parseDouble(str[2]);
+  	  		
+  	  		studentList.add(new Student(index,0,"name",cpi));
+  	  		
+  	  		line = br.readLine();
+  	 	}
+  	 	
+  	 	
+  	 	
+  	 	br.close();    
+        fr.close(); 
+        
+        return studentList;
+	}	
+	public void printStudentData(LinkedList<Student> studentList){
+		Iterator<Student> itr=studentList.iterator();  
+		  while(itr.hasNext()){
+			  Student student = itr.next();	  
+			  System.out.println(student.index+" "+student.id +" "+student.cpi+" "+student.name);  
+		  }
+	}
+}

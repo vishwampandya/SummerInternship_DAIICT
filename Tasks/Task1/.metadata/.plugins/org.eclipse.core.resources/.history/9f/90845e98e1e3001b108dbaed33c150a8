@@ -1,0 +1,18 @@
+package TestCases;
+
+import static org.junit.Assert.*;
+
+import java.util.LinkedList;
+import java.
+
+import org.junit.Test;
+
+public class LinkedListCheck {
+
+	@Test
+	public void test() {
+		College daiict = new College();
+		  LinkedList<Student> studentList =  daiict.fillData("/home/vishwam/E/college/DAIICT/Summer Internship (Under Lavneet sir)/SummerInternship_DAIICT/Tasks/Task3 (graphs)/Project/src/data.txt");
+	}
+
+}

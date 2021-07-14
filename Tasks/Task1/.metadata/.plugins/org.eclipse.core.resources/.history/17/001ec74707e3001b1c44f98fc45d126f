@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.LinkedList;
+
+public class College{
+	public static void main(String[] args) throws Exception{
+	  College daiict = new College();
+	  daiict.fillData("./data.txt");
+	  
+	}
+	
+	public LinkedList<Student> fillData(String fileName) throws Exception{
+		FileReader fr=new FileReader("./data.txt");    
+        BufferedReader br=new BufferedReader(fr);  
+        
+        LinkedList<Student> studentList = new LinkedList<Student>();
+  	  
+  	 	String line = br.readLine();
+  	 	while(!line.equals("-1")){
+  	  		String[] str = line.trim().split("\\s+");
+  	  		//System.out.println(str[1]+"--"+str[2]+"--"+str[0]);
+  	  		
+  	  		
+  	  		line = br.readLine();
+  	 	}
+  	 	
+  	 	
+  	 	
+  	 	br.close();    
+        fr.close(); 
+        
+        return studentList;
+	}	
+}
